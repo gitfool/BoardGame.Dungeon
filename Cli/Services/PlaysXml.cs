@@ -1,4 +1,4 @@
-namespace BoardGameGeek.Dungeon.Services;
+namespace BoardGame.Dungeon.Services;
 
 [XmlRoot("plays")]
 public sealed record UserPlays

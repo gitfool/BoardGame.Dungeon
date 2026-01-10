@@ -2,7 +2,7 @@
 
 Build.SetParameters
 (
-    title: "BoardGameGeek.Dungeon",
+    title: "BoardGame.Dungeon",
 
     defaultLog: true,
 
@@ -24,7 +24,7 @@ Build.SetParameters
     dockerPushLatest: true,
     dockerPushSkipDuplicate: true,
 
-    dockerImages: new[] { new DockerImage { Repository = "dockfool/boardgamegeek-dungeon", Context = "Cli" } }
+    dockerImages: new[] { new DockerImage { Repository = "dockfool/boardgame-dungeon", Context = "Cli" } }
 );
 
 Build.Run();

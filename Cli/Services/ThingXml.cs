@@ -1,4 +1,4 @@
-namespace BoardGameGeek.Dungeon.Services;
+namespace BoardGame.Dungeon.Services;
 
 [XmlRoot("items")]
 public sealed record ThingItems

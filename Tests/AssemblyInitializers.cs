@@ -1,6 +1,6 @@
 [assembly: AssertionEngineInitializer(typeof(AssemblyInitializers), nameof(AssemblyInitializers.AcceptLicense))]
 
-namespace BoardGameGeek.Dungeon;
+namespace BoardGame.Dungeon;
 
 public static class AssemblyInitializers
 {

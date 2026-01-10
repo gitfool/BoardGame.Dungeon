@@ -1,4 +1,4 @@
-namespace BoardGameGeek.Dungeon;
+namespace BoardGame.Dungeon;
 
 public sealed class ModelTests
 {

@@ -1,4 +1,4 @@
-namespace BoardGameGeek.Dungeon.Services;
+namespace BoardGame.Dungeon.Services;
 
 public interface IBggService
 {

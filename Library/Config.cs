@@ -1,3 +1,3 @@
-namespace BoardGameGeek.Dungeon;
+namespace BoardGame.Dungeon;
 
 public sealed record Config;

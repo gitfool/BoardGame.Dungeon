@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 FROM mcr.microsoft.com/dotnet/runtime:10.0.1-noble
 
-LABEL org.opencontainers.image.source=https://github.com/gitfool/BoardGameGeek.Dungeon
+LABEL org.opencontainers.image.source=https://github.com/gitfool/BoardGame.Dungeon
 
 # Install packages
 RUN <<EOF
@@ -34,8 +34,8 @@ COPY --link --chown=1000:1000 bin/Release/publish /app
 
 RUN <<EOF
     set -ex
-    echo "alias d='dotnet /app/bgg-dungeon.dll'" >> ~/.bash_aliases
+    echo "alias d='dotnet /app/bg-dungeon.dll'" >> ~/.bash_aliases
     find /app -type f -regextype posix-egrep -iregex '.*\.(dll|json|yaml)$' -exec chmod -x {} \;
 EOF
 
-ENTRYPOINT [ "dotnet", "/app/bgg-dungeon.dll" ]
+ENTRYPOINT [ "dotnet", "/app/bg-dungeon.dll" ]

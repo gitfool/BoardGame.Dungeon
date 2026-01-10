@@ -1,6 +1,6 @@
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 
-namespace BoardGameGeek.Dungeon;
+namespace BoardGame.Dungeon;
 
 public abstract class TestBase : IDisposable
 {

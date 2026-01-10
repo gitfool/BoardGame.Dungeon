@@ -1,4 +1,4 @@
-namespace BoardGameGeek.Dungeon;
+namespace BoardGame.Dungeon;
 
 public abstract class CommandBase<TSettings> : Command<TSettings> where TSettings : CommandSettings
 {

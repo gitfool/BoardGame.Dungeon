@@ -1,6 +1,6 @@
 using YamlDotNet.Serialization;
 
-namespace BoardGameGeek.Dungeon;
+namespace BoardGame.Dungeon;
 
 public sealed partial class ConfigCommand : CommandBase<ConfigCommand.Settings>
 {

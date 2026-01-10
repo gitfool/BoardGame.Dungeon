@@ -1,4 +1,4 @@
-namespace BoardGameGeek.Dungeon.Extensions;
+namespace BoardGame.Dungeon.Extensions;
 
 public static class ResiliencePipelineExtensions
 {

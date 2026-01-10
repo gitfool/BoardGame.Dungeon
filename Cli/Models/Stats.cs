@@ -1,4 +1,4 @@
-namespace BoardGameGeek.Dungeon.Models;
+namespace BoardGame.Dungeon.Models;
 
 public sealed record Stats
 {

@@ -2,5 +2,5 @@ Serilog:
   MinimumLevel:
     Default: Information
     Override:
-      BoardGameGeek.Dungeon: Debug
+      BoardGame.Dungeon: Debug
       Microsoft: Warning

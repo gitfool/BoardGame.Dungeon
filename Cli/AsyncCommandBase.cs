@@ -1,4 +1,4 @@
-namespace BoardGameGeek.Dungeon;
+namespace BoardGame.Dungeon;
 
 public abstract class AsyncCommandBase<TSettings> : AsyncCommand<TSettings> where TSettings : CommandSettings
 {

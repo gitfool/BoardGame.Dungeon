@@ -1,6 +1,6 @@
 using Serilog;
 
-namespace BoardGameGeek.Dungeon;
+namespace BoardGame.Dungeon;
 
 public static class HostBuilderExtensions
 {

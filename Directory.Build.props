@@ -17,7 +17,7 @@
     <Nullable>enable</Nullable>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
-    <RootNamespace>BoardGameGeek.Dungeon</RootNamespace>
+    <RootNamespace>BoardGame.Dungeon</RootNamespace>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 </Project>
