@@ -1,3 +1,5 @@
+BoardGameDungeon:
+
 Serilog:
   MinimumLevel:
     Override:

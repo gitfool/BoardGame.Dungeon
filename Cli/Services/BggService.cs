@@ -21,10 +21,12 @@ public sealed class BggService : IBggService
         public string? Error { get; set; }
     }
 
-    public BggService(ILogger<BggService> logger)
+    public BggService(IOptions<Config> options, ILogger<BggService> logger)
     {
+        Config = options.Value;
         Logger = logger;
         FlurlClient = new FlurlClient("https://boardgamegeek.com")
+            .WithOAuthBearerToken(Config.OAuthBearerToken)
             .BeforeCall(call => { Logger.LogDebug($"{call.Request.Verb} {call.Request.Url}"); });
         ResiliencePipeline = new ResiliencePipelineBuilder<IFlurlResponse>().AddRetry(new RetryStrategyOptions<IFlurlResponse>
         {
@@ -35,7 +37,7 @@ public sealed class BggService : IBggService
                 _ => PredicateResult.False()
             },
             BackoffType = DelayBackoffType.Exponential,
-            Delay = TimeSpan.FromSeconds(2),
+            Delay = TimeSpan.FromSeconds(4),
             MaxDelay = TimeSpan.FromMinutes(1),
             MaxRetryAttempts = 16,
             OnRetry = args =>
@@ -68,7 +70,7 @@ public sealed class BggService : IBggService
 
         var thingCollections = ids.Distinct()
             .OrderBy(id => id)
-            .Buffer(100)
+            .Buffer(20)
             .ToAsyncEnumerable()
             .Select(GetThingAsync);
 
@@ -234,6 +236,7 @@ public sealed class BggService : IBggService
         return play;
     }
 
+    private Config Config { get; }
     private ILogger Logger { get; }
     private IFlurlClient FlurlClient { get; }
     private CookieJar? Cookies { get; set; }
