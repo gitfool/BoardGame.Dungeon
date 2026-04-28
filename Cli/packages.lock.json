@@ -440,14 +440,14 @@
       },
       "YamlDotNet": {
         "type": "Transitive",
-        "resolved": "16.3.0",
-        "contentHash": "SgMOdxbz8X65z8hraIs6hOEdnkH6hESTAIUa7viEngHOYaH+6q5XJmwr1+yb9vJpNQ19hCQY69xbFsLtXpobQA=="
+        "resolved": "17.1.0",
+        "contentHash": "AhsNXgeAs3Ugt653t8LC44xXDuldFfwBpWbWX9pN3e4Yg8U5Bk8jLn8eXtGv5HV2V2nHu7F46fqsPC+tpcTGAA=="
       },
       "library": {
         "type": "Project",
         "dependencies": {
           "FluentValidation": "[12.1.1, )",
-          "YamlDotNet": "[16.3.0, )"
+          "YamlDotNet": "[17.1.0, )"
         }
       }
     }
