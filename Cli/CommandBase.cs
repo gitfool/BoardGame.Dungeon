@@ -8,7 +8,7 @@ public abstract class CommandBase<TSettings> : Command<TSettings> where TSetting
         Logger = logger;
     }
 
-    protected override int Execute(CommandContext context, TSettings settings, CancellationToken cancellationToken)
+    public override int Execute(CommandContext context, TSettings settings, CancellationToken cancellationToken)
     {
         try
         {
